@@ -5,14 +5,10 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
-    user_no = User.objects.get(id = 1).phone
-    print(user_no)
+    user_phone_no = User.objects.get(id = 1).phone#to get user phone no.
+    print('phone no is:',user_phone_no)
 
-    user = Phone.objects.get(id=1).user_id
-    print(user)
-
-
-
-
+    user = Phone.objects.get(id=1).user #this is reverse one to get user associated with phone no.
+    print('name of user is:',user)
 
 
